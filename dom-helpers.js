@@ -11,11 +11,6 @@ function $(selector) {
 	}
 }
 
-// for html support in template literals with the lit-html visual studio code extension
-function html(markup) {
-	return markup;
-}
-
 function insertFromTemplate(templateSelector, locationSelector) {
 	const templateSelection = $(templateSelector);
 
@@ -47,3 +42,7 @@ function insertText(text, selector) {
 }
 
 export { $, html, insertFromTemplate, insertText };
+
+// for html support in template literals with the lit-html visual studio code extension
+
+const html = (markup) => markup;
